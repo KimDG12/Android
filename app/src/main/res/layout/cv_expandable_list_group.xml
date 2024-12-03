@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingStart="20dp"
+    android:paddingVertical="15dp"
+    android:paddingEnd="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/cv_recycling_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="30dp"
+        android:background="@drawable/custom_circle_background_gray"
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/include"
+        app:layout_constraintEnd_toStartOf="@id/ibArrow"
+        app:layout_constraintTop_toTopOf="@id/include"
+        app:layout_constraintBottom_toBottomOf="@id/include"
+        android:text="캔류 알루미늄에 대한 정보" />
+
+    <TextView
+        android:id="@+id/ibArrow"
+        app:layout_constraintTop_toTopOf="@id/include"
+        app:layout_constraintBottom_toBottomOf="@id/include"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/ic_arrow_down1_black" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

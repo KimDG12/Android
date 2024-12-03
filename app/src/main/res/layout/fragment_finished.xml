@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.finished.FinishedFragment">
+
+
+    <View
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="60dp"
+        android:id="@+id/view1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/white_grey" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rounded_shape"
+        android:gravity="center_horizontal"
+        android:padding="30dp"
+        android:text="Game Finished !!"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+    <include
+        android:id="@+id/inProgressState"
+        layout="@layout/in_progress_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:layout_marginTop="80dp" />
+
+    <View
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="60dp"
+        android:id="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@id/inProgressState"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/white_grey" />
+
+
+    <Button
+        android:minWidth="200dp"
+        android:id="@+id/btnReStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:paddingHorizontal="50dp"
+        android:text="Re Start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view2" />
+
+    <Button
+        android:minWidth="200dp"
+        android:id="@+id/btnGoHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="50dp"
+        android:text="Go to the Home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnReStart" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

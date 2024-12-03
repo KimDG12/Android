@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/ibAddressSearch"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search_black"
+                android:background="@color/white"
+                android:layout_marginStart="20dp" />
+
+
+            <TextView
+                android:maxLength="25"
+                android:id="@+id/tvAddress"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="전라북도 군산시 미룡동 학사원룸 302호"
+                />
+
+            <ImageButton
+                android:id="@+id/ibAddressOpenList"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvAddress"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_down_black"
+                android:background="@color/white" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/custom_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/teal_200" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/gradient_background" />
+
+
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/tvClFirstAppInfo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="AI 이미지 재활용 인식 배출 방법 안내"
+                    android:theme="@style/bold_style_white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.SearchView
+                    android:layout_margin="10dp"
+                    android:id="@+id/svCl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="15dp"
+                    android:background="@drawable/custom_circle_background"
+                    app:layout_constraintBottom_toTopOf="@id/tvClFirstAppInfo2"
+                    app:layout_constraintTop_toBottomOf="@id/tvClFirstAppInfo1" >
+
+
+                </androidx.appcompat.widget.SearchView>
+
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/tvClFirstAppInfo2"
+                    style="@style/bold_style_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제대로 어떻게 버리지?"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/svCl1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"/>
+
+            <!-- 색깔은 임시로 넣어 둔 것 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="카테고리별 안내"
+                    android:theme="@style/bold_style_black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <GridLayout
+                    android:id="@+id/gl1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="5"
+                    android:rowCount="3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/ib_furniture"
+                            style="@style/icon_style"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/icon_furniture" />
+
+                        <TextView
+                            android:id="@+id/tv_furniture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="가구/인테리어"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/ib_electronics"
+                            style="@style/icon_style"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/icon_electronics" />
+
+                        <TextView
+                            android:id="@+id/tv_electronics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="가전제품" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/ib_daily"
+                            style="@style/icon_style"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/icon_daily" />
+
+                        <TextView
+                            android:id="@+id/tv_daily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:text="생활용퓸" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="3"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/ib_bathroom"
+                            style="@style/icon_style"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/icon_bathroom" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="욕실용품" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="4"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/ib_book"
+                            style="@style/icon_style"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/icon_book" />
+
+                        <TextView
+                            android:id="@+id/tv_book"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="도서/문구" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/ib_cosmetics"
+                            style="@style/icon_style"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/icon_cosmetics" />
+
+                        <TextView
+                            android:id="@+id/tv_cosmetics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="화장품" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/ib_kitchen"
+                            style="@style/icon_style"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/icon_kitchen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="주방용품" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="2"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/ib_food"
+                            style="@style/icon_style"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/icon_food" />
+
+                        <TextView
+                            android:id="@+id/tv_food"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="식품" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="3"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/ib_container"
+                            style="@style/icon_style"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/icon_container" />
+
+                        <TextView
+                            android:id="@+id/tv_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="용기/포장재"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="4"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/ib_dress"
+                            style="@style/icon_style"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/icon_dress" />
+
+                        <TextView
+                            android:id="@+id/tv_dress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="패션/잡화" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="2"
+                        android:layout_column="0"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/ib_more"
+                            style="@style/icon_style"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/icon_more" />
+
+                        <TextView
+                            android:id="@+id/tv_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="기타" />
+                    </LinearLayout>
+                </GridLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginBottom="90dp"
+                android:id="@+id/cl3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:paddingBottom="150dp">
+
+                <TextView
+                    android:id="@+id/tv_bookmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="즐겨찾기"
+                    android:theme="@style/bold_style_black"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_margin="5dp"
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:listitem="@layout/cv_favorite_item"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@id/tv_bookmark"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

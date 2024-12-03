@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- 카메라 사용 권한 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Google Map & Firebase -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+
+            <data android:scheme="mailto" />
+        </intent>
+    </queries>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" /> <!-- 내부 저장소 사용 권한 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 인터넷 사용 권한 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_app"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Recycle_App"
+        tools:targetApi="31">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.icarus.recycle_app.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/file_paths" /> <!-- @xml/file_paths는 나중에 생성합니다 -->
+
+    </provider>
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="murnmjpqlu" /> <!-- 네이버 클라우드 콘솔에서 발급받은 Client ID -->
+
+        <!-- Google Map Key -->
+        <activity
+            android:name=".ui.study_game.StudyGameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.setting.LicenseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.setting.DeveloperInfoActivity"
+            android:exported="false" /> <!-- 쓰레기 안내 액티비티 -->
+        <activity
+            android:name=".ui.info.content.InfoContentActivity"
+            android:exported="true" /> <!-- 카테고리 액티비티 -->
+        <activity
+            android:name=".ui.category.CategoryResultActivity"
+            android:exported="true" /> <!-- 파일 저장소 관련 프로바이더 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.icarus.recycle_app.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- 쓰레기 결과 반환 액티비티 -->
+        <activity
+            android:name=".ui.search.image.trash_request.TrashRequestActivity"
+            android:exported="true" /> <!-- 검색 화면 -->
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:exported="false" /> <!-- 도움말 화면 액티비티 -->
+        <activity
+            android:name=".ui.search.base.SearchListActivity"
+            android:exported="false" /> <!-- 검색 화면 액티비티 -->
+        <activity
+            android:name=".ui.onboarding.OnBoardingActivity"
+            android:exported="true"/>
+        <activity android:name=".ui.setting.BookmarkListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 메인 액티비티 화면 -->
+        <activity
+            android:name=".ui.search.image.trash_request.ImageResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+    </application>
+
+</manifest>

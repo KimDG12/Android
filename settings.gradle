@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://navermaps.github.io/android-map-sdk/repo/") } // 올바른 네이버 지도 SDK 저장소 URL
+        maven { url = uri("https://jitpack.io") } // JitPack 저장소
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://repository.map.naver.com/archive/maven") } // 올바른 네이버 지도 SDK 저장소 URL
+        maven { url = uri("https://jitpack.io") } // JitPack 저장소
+    }
+}
+rootProject.name = "Recycle_App"
+include ':app'

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.search.image.trash_request.TrashRequestActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/ibBack"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_black"
+                android:background="@color/white"
+                android:layout_marginStart="15dp" />
+
+
+            <TextView
+                android:id="@+id/tvToolBarTitle"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="쓰레기 이름"
+                />
+
+            <ImageButton
+                android:id="@+id/ibFavorite"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_blank_favorite"
+                android:background="@color/white"
+                android:layout_marginEnd="15dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:minHeight="150dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+
+
+                <View
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:background="@drawable/cv_fav_image_rounded"
+                    android:id="@+id/ivTrash"
+                    android:layout_margin="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:scaleType="fitEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:minHeight="150dp"
+                android:background="@color/white"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:padding="15dp"
+                    android:background="@drawable/custom_circle_background_gray"
+                    android:id="@+id/tvTrashTitle"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:maxLines="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="쓰레기 정보" />
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:padding="15dp"
+                    android:background="@drawable/custom_circle_background_gray"
+                    android:layout_marginVertical="15dp"
+                    android:id="@+id/tvTrashType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="이 쓰레기는 이렇게 버림"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:minHeight="150dp"
+                android:background="@color/white"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:padding="15dp"
+                    android:background="@drawable/custom_circle_background_gray"
+                    android:id="@+id/tvTrashThrowInfoTitle"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:maxLines="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="쓰레기 이름의 버리는 방법" />
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:padding="15dp"
+                    android:background="@drawable/custom_circle_background_gray"
+                    android:layout_marginVertical="15dp"
+                    android:id="@+id/tvTrashThrowInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="이 쓰레기는 이렇게 버림"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:minHeight="150dp"
+                android:background="@color/white"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:padding="15dp"
+                    android:background="@drawable/custom_circle_background_gray"
+                    android:id="@+id/tvTrashTipInfoTitle"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="쓰레기 이름의 알아두면 좋은 점" />
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:padding="15dp"
+                    android:background="@drawable/custom_circle_background_gray"
+                    android:layout_marginBottom="30dp"
+                    android:id="@+id/tvTrashTipInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="이 쓰레기는 이렇게 버림"/>
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+
+
+

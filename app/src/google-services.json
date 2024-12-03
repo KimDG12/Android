@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "590934505717",
+    "project_id": "andriodproject-bc748",
+    "storage_bucket": "andriodproject-bc748.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590934505717:android:7535acd4072b45c5016dbc",
+        "android_client_info": {
+          "package_name": "com.icarus.recycle_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD14vO6IpfI5sJIit0XZILCrhZWnE4mlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

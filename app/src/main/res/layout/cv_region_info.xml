@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/provinceName"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="경상남도" />
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/provinceName"
+        android:id="@+id/districtName"
+        android:layout_marginStart="8dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="진주시" />
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/districtName"
+        android:id="@+id/sectorName"
+        android:layout_marginStart="8dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 구역" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:gravity="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/provinceName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/targetAreaName"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가호동+충무공동+문산읍+진성면+일반성면+이반성면+사봉면+지수면+금산면)" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

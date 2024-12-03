@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.setting.DeveloperInfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="200dp">
+
+            <View
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/teal_200" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/gradient_background" />
+
+            <TextView
+                android:id="@+id/tvTitle1"
+                style="@style/bold_style_white"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="군산대 소프트웨어학과" />
+
+
+            <TextView
+                android:id="@+id/tvTitle2"
+                style="@style/bold_style_white"
+                android:textSize="35sp"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle1"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="네 쓰레기야" />
+
+
+            <TextView
+                android:id="@+id/tvTitle3"
+                style="@style/bold_style_white"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle2"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="앱을 이용한 인공지능 이미지 판별 쓰레기 재활용 안내 프로젝트" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            style="@style/info_title_black_bold"
+            android:background="@drawable/custom_circle_background_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이번 프로젝트 소개"/>
+
+        <TextView
+            style="@style/info_content_black_bold"
+            android:background="@drawable/custom_circle_background_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이미지 감지 판별 인공지능 모델을 학습하여 스마트폰으로 쓰레기 사진을 촬영하여 분류결과에 따른 쓰레기 배출 및 분리수거 방법을 안내하고 현재 저조한 재활용률을 상승시키고 크롤링되어 구축된 환경 및 재활용 데이터를 사용자에게 안내하는 프로젝트입니다." />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/linearLayoutForText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_marginHorizontal="5dp"
+        android:gravity="center"
+        android:id="@+id/tvTimeTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvCurrentScoreTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="경과 시간" />
+
+
+    <TextView
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center"
+        android:id="@+id/tvCurrentScoreTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvTimeTitle"
+        app:layout_constraintEnd_toStartOf="@id/tvMaxScoreTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="현재 점수" />
+
+    <TextView
+        android:layout_marginHorizontal="5dp"
+        android:gravity="center"
+        android:id="@+id/tvMaxScoreTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvCurrentScoreTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="최고 점수" />
+
+    <TextView
+        android:gravity="center"
+        android:minWidth="110dp"
+        android:paddingHorizontal="13dp"
+        android:background="@drawable/rounded_shape"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/tvTime"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvTimeTitle"
+        app:layout_constraintEnd_toEndOf="@id/tvTimeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00" />
+
+
+    <TextView
+        android:gravity="center"
+        android:minWidth="110dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/rounded_shape"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/tvCurrentScore"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvCurrentScoreTitle"
+        app:layout_constraintEnd_toEndOf="@id/tvCurrentScoreTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000000" />
+
+    <TextView
+        android:gravity="center"
+        android:minWidth="110dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/rounded_shape"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/tvMaxScore"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvMaxScoreTitle"
+        app:layout_constraintEnd_toEndOf="@id/tvMaxScoreTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000000"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

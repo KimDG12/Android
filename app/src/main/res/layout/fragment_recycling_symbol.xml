@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recycling_symbol"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp" >
+
+        <TextView
+            android:padding="20dp"
+            android:background="@drawable/custom_circle_background_gray"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="대한민국의 재활용 마크는 주로 모비우스 띠 형태의 회색 화살표로 이루어져 있습니다. 이 마크는 환경부가 관리하며, 재활용이 가능한 제품이나 포장재에 붙여져 있습니다.\n\n일부 제품에는 플라스틱 종류 등을 숫자와 알파벳으로 표시하기도 합니다. 이 마크는 소비자가 재활용 가능한 제품을 쉽게 구분할 수 있게 도와주며, 환경 보호에 기여하고 있습니다." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ExpandableListView
+        android:id="@+id/elvRecyclingSymbol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:scrollbars="none"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+
+
+</LinearLayout>

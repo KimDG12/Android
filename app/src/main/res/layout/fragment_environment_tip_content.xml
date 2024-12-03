@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.info.content.environment_tip.EnvironmentTipContentFragment"
+    android:orientation="vertical">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vpTitleImage"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="250dp" />
+
+            <me.relex.circleindicator.CircleIndicator3
+                app:layout_constraintBottom_toBottomOf="@id/vpTitleImage"
+                android:id="@+id/indicator"
+                android:layout_height="48dp"
+                android:layout_width="match_parent"
+                app:ci_drawable="@drawable/cv_circle_indicator"
+                app:ci_height="7dp"
+                app:ci_width="7dp"
+                app:ci_margin="4dp" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:textSize="20sp"
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/custom_circle_background_gray"
+                app:layout_constraintTop_toBottomOf="@id/vpTitleImage"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasd "/>
+
+            <TextView
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/custom_circle_background_gray"
+                android:text="산림 정보청 | 2016-08-05"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                android:id="@+id/tvInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/custom_circle_background_gray"
+                android:text="Lorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasLorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasdLorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasdLorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasdLorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasdLorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasdLorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasdLorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasdLorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasdLorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasdLorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasdLorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasdLorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasdLorem ipsum door sit amet, consertur adipcsel, sed alua s, do elmode temporinc iondlsuasdd "
+
+                app:layout_constraintTop_toBottomOf="@id/tvInfo"
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</LinearLayout>
